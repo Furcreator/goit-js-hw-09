@@ -14,7 +14,7 @@ function getRandomHexColor() {
     e.preventDefault();
     startBtn.disabled = true;
     stopBtn.disabled = false;
-    timeColorId = setInterval(()=>{
+    timeId = setInterval(()=>{
         const color = getRandomHexColor();
         document.body.style.backgroundColor = color;
     }, 1000)
@@ -22,7 +22,7 @@ function getRandomHexColor() {
   }
   function onClickBtnStop(e) {
     e.preventDefault();
-    clearInterval(timeColorId);
+    clearInterval(timeId);
     startBtn.disabled = false;
     stopBtn.disabled = true;
   }
