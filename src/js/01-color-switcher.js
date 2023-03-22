@@ -14,6 +14,7 @@ function updateClock() {
   const color = getRandomHexColor();
   document.body.style.backgroundColor = color;
 }
+timeId = null;
 
 function onClickBtnStart(e) {
   e.preventDefault();
