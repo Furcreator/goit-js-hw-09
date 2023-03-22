@@ -14,19 +14,15 @@ function updateClock() {
   const color = getRandomHexColor();
   document.body.style.backgroundColor = color;
 }
-timeId = null;
+const timeId = null;
 
 function onClickBtnStart(e) {
   e.preventDefault();
   startBtn.disabled = true;
   stopBtn.disabled = false;
   timeId = setInterval(updateClock, 1000);
-  // timeId = setInterval(()=>{
-  //     const color = getRandomHexColor();
-  //     document.body.style.backgroundColor = color;
-  // }, 1000)
-
 }
+
 function onClickBtnStop(e) {
   e.preventDefault();
   clearInterval(timeId);
